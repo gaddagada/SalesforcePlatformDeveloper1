@@ -1,5 +1,5 @@
 public with sharing class Strings {
-    public static void  Strings() {
+    public static void StringMethods() {
         String s = 'deepika khanna'; 
 
         // IndexOf()
