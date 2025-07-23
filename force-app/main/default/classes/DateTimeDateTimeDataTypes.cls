@@ -32,6 +32,17 @@ public with sharing class DateTimeDateTimeDataTypes {
         System.debug('Year is '+ dt1.year());
         Boolean isLeapYear = Date.isLeapYear(dt1.year()); 
         System.debug('is 2020 a leap year ' + isLeapYear);
+
+        //Time API in Apex 
+        Time myTime = Time.newInstance(6, 12, 4, 40); 
+        System.debug('Time is ' + myTime);
+        Time myTime2 = myTime.addHours(4); 
+        System.debug('new time after adding 4 hours ' + myTime2); 
+        Time myTime3 = myTime.addMinutes(20); 
+        System.debug('new time after adding 20 minutes ' + myTime3); 
+        Time myTime4 = myTime.addMilliseconds(30); 
+        System.debug('new time after adding 30 milliseconds ' + myTime4); 
+
         
     }
 }
