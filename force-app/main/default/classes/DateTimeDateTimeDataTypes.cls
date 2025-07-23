@@ -43,6 +43,33 @@ public with sharing class DateTimeDateTimeDataTypes {
         Time myTime4 = myTime.addMilliseconds(30); 
         System.debug('new time after adding 30 milliseconds ' + myTime4); 
 
+        //DateTime API in Apex 
+        Datetime myDateTime1 = Datetime.newInstance(2019, 2, 12,8, 10, 00); 
+        System.debug('myDateTime1 =' +  myDateTime1); 
+
+        Datetime myDateTime2 = myDateTime1.addHours(2); 
+        System.debug('myDateTime2 =' +  myDateTime2); 
+
+        Datetime myDateTime3 = myDateTime1.addDays(4);
+        System.debug('myDateTime3 =' +  myDateTime3); 
+
+        DateTime myDateTime4 = myDateTime1.addMonths(5);
+        System.debug('myDateTime4 =' +  myDateTime4); 
+
+        DateTime myDateTime5 = myDateTime1.addYears(2);
+        System.debug('myDateTime5 =' +  myDateTime5); 
+
+        Date myDate1 = myDateTime1.date();
+        System.debug('Date is ' + myDate1);
+
+        Datetime newDateTime1 = Datetime.instance(2019, 4, 14, 5, 10, 15); 
+        System.debug('newDateTime1' + newDateTime1);
+        String formattedDateTime = newDateTime1.format();
+        System.debug('formattedDateTime' + formattedDateTime);
+
+
+
+
         
     }
 }
