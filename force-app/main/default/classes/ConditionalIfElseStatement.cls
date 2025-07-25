@@ -17,4 +17,13 @@ public with sharing class ConditionalIfElseStatement {
             System.debug('All the best for the next exam!!');
         }
     }
+
+    public static void whoIsOlder(){
+        Integer myAge = 28, myFriendAge=30; 
+        if(myAge > myFriendAge){
+            System.debug('I am older than my friend'); 
+        }else{
+            System.debug('My friend is older than me');
+        }
+    }
 }
