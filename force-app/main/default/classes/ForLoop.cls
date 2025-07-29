@@ -12,5 +12,18 @@ public with sharing class ForLoop {
         }
     }
 
-    
+    public static void forLoopListOrSetDataTypeEmployeeNames(){
+        List<String> empNames = new List<String>{'Deepika', 'Vivek', 'John', 'Dev', 'Sam'};
+        for(String empName : empNames){
+            System.debug('Name = ' + empName);
+        }
+    }
+
+    public static void forLoopListOrSetDataTypeEmployeeIdList(){
+        List<Integer> empIds = new List<Integer>{10011, 12000,12222, 45900, 12344};
+        for(Integer empId : empIds){
+            System.debug('empId = ' + empId);
+
+        }
+    }
 } 
