@@ -44,4 +44,13 @@ public with sharing class ForLoop {
             System.debug('value of i = ' + i);
         }
     }
+
+    // Nested Loops: Placing a loop inside another loop is called nested loops.
+    public static void nestedForLoop(){
+        for(integer a = 0; a <= 3; a++){
+            for(integer b=0; b <=2; b++){
+                System.debug('a = ' + a + 'b = ' + b);
+            }
+        }
+    }
 } 
