@@ -26,4 +26,22 @@ public with sharing class ForLoop {
 
         }
     }
+
+    public static void forLoopBreakStatement(){
+        for(Integer i=1; i<=10; i++){
+            if(i == 5){
+                break;
+            }
+            System.debug('value of i = ' + i);
+        }
+    }
+
+    public static void forLoopContinueStatement(){
+        for(Integer i=1; i<=10; i++){
+            if(i == 5){
+                continue;
+            }
+            System.debug('value of i = ' + i);
+        }
+    }
 } 
