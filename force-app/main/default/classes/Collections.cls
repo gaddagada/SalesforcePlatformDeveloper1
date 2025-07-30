@@ -27,7 +27,6 @@ public with sharing class Collections {
     // Map Collection 
     public static void mapCollectionExample() {
         Map<Integer, String> studentNamesMap = new Map<Integer, String>();
-        studentNamesMap.put(1, 'Ravi'); 
         studentNamesMap.put(5, 'John'); 
         studentNamesMap.put(15, 'Adam'); 
         studentNamesMap.put(22, 'Tina'); 
@@ -36,5 +35,18 @@ public with sharing class Collections {
 
         System.debug('Value for the key  = 15 ' + studentNamesMap.get(15));
         System.debug('Value for the key  = 155 ' + studentNamesMap.get(5));
+    }
+
+    // List collection class methods 
+    public static void listCollectionMethods(){
+        //Displaying multiple items added to a list at once 
+        List<String> myStrings = new List<String>{'one', 'three', 'two', 'four'};
+        System.debug('list has following items ' + myStrings);
+        myStrings.add('eleven');
+        System.debug('new list has following items ' + myStrings);
+
+        // Display one element
+        System.debug('element at index 1 ' + myStrings[1]);
+        System.debug('element at index 1 ' + myStrings.get(1)); 
     }
 }
