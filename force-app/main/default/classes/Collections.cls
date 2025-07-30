@@ -80,6 +80,9 @@ public with sharing class Collections {
         hSet.add('Mango');
         hSet.add(null);
         hSet.add(null);
+
+        // display elements of my set 
+        System.debug('Elements of my set ' + hSet);
         
 
     }
