@@ -1,4 +1,4 @@
-public with sharing class StaticAndNonStaticVariableExampl {
+public with sharing class StaticAndNonStaticVariableExample {
     public integer num1; // non-static variable 
     public static integer num2; // static variable
 
