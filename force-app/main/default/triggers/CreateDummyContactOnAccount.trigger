@@ -32,6 +32,29 @@ trigger CreateDummyContactOnAccount on Account (after insert, before delete, bef
                 }
             }
         }
+    }else if(Trigger.isInsert){
+        /* 
+         * Update default values on account object before insert: Account if you are inserting 
+         * has blank values for billingCity, billingState, etc. Populate them with values before insert.  
+         */
+            for(Account acc:Trigger.new){
+                if(String.isBlank(acc.BillingCity))
+                {
+                    acc.BillingCity='Dallas';
+                }
+                if(String.isBlank(acc.BillingState))
+                {
+                    acc.BillingState='Texas';
+                }
+                if(String.isBlank(acc.AccountNumber))
+                {
+                    acc.AccountNumber='YYYY'; 
+                }
+                if(String.isBlank(acc.billingCountry))
+                {
+                    acc.BillingCountry='US';
+                }
+            } 
     }
 }
 
