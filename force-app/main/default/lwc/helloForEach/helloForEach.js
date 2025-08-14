@@ -16,6 +16,16 @@ export default class HelloForEach extends LightningElement {
             Id:3, 
             Name: 'Jennifer Wu', 
             Title: 'CEO'
+        }, 
+        {
+            Id:4, 
+            Name: 'Jennifer Anigston ', 
+            Title: 'CP of Marketing'
+        }, 
+        {
+            Id:5, 
+            Name: 'Gayathri Addagada', 
+            Title: 'CTO'
         }
     ];
 }
