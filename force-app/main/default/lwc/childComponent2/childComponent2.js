@@ -6,7 +6,7 @@ export default class ChildComponent2 extends LightningElement {
         const name = event.target.value;
         // Create custom event by passing name of the event and then whatever data you want to pass. 
         // storing that is selectEvent variable 
-        const selectEvent = new CustomEvent('mycustomevent', {detail:name}); 
+        const selectEvent = new CustomEvent('mycustomevent', {detail:name, bubbles:true}); 
 
         //dispatch the event 
         this.dispatchEvent(selectEvent); 
