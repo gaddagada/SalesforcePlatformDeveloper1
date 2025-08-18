@@ -7,5 +7,29 @@
                 <lightning-button label="View Record Page" onclick={navigateToViewRecordPage}></lightning-button>
             </Lightning-button-group>
         </lightning-card>
+        <lightning-card title="Navigate to List Views">
+            <lightning-button-group>
+                <lightning-button label="Account Recent View" onclick={navigateAccRecentView}></lightning-button>
+                <lightning-button label="Related List View" onclick={navigateRelatedListView}></lightning-button>
+            </lightning-button-group>
+        </lightning-card><br>
+        <lightning-card title="Navigate to Object Page">
+        <lightning-button-group>
+            <lightning-button label ="Account Page" onclick={navigateAccObject}></lightning-button>
+            <lightning-button label ="Contact Page" onclick={navigateConObject}></lightning-button>
+        </lightning-button-group>
+    </lightning-card> <br/>
+    <lightning-card title="Navigate to Web Page">
+            <lightning-button-group>
+                <lightning-button label ="Web Page" onclick={navigateToWebPage}></lightning-button>
+            </lightning-button-group>
+        </lightning-card>
+        <lightning-card title="Navigate to Standard Home  Tabs">
+                <lightning-button-group>
+                    <lightning-button label ="Home Page" onclick={navigateToHomePage}></lightning-button>
+                    <lightning-button label ="Chatter Page" onclick={navigateToChatterHome}></lightning-button>
+                </lightning-button-group>
+            </lightning-card>
+        </lightning-card>
     </lightning-card>
 </template>
