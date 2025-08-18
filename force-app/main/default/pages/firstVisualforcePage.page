@@ -1,14 +1,14 @@
-<apex:page >
-<apex:pageBlock title="FirstBlock">
+<apex:page>
+    <apex:pageBlock title="FirstBlock">
         <apex:pageBlockSection title="First Section">
             <apex:pageBlockSectionItem>MytutorialRack</apex:pageBlockSectionItem>
             <apex:pageBlockSectionItem>Salesforce Admin</apex:pageBlockSectionItem>
             <apex:pageBlockSectionItem>Salesforce Developers</apex:pageBlockSectionItem>
         </apex:pageBlockSection>
+
         <apex:pageBlockSection title="Second Section">
             <apex:pageBlockSectionItem>Item1</apex:pageBlockSectionItem>
             <apex:pageBlockSectionItem>Item2</apex:pageBlockSectionItem>
         </apex:pageBlockSection>
-    </apex:pageBlockSection>
-</apex:pageBlock>
+    </apex:pageBlock>
 </apex:page>
