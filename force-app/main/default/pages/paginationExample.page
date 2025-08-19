@@ -1,0 +1,20 @@
+<apex:page standardController="Opportunity" recordSetVar="opps">
+    <apex:form id="theForm">
+        <apex:pageBlock title="Viewing Opportunities">
+
+            <apex:pageBlockSection title="Opportunity List">
+                <apex:dataList value="{!opps}" var="a">
+                    {!a.Name}
+                </apex:dataList>
+            </apex:pageBlockSection>
+
+            <apex:panelGrid columns="4">
+                <apex:commandLink action="{!previous}">Prev</apex:commandLink>
+                <apex:commandLink action="{!next}">Next</apex:commandLink>
+                <apex:commandLink action="{!first}">FIRST</apex:commandLink>
+                <apex:commandLink action="{!last}">LAST</apex:commandLink>
+            </apex:panelGrid>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
