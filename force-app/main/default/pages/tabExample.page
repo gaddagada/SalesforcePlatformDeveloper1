@@ -1,0 +1,13 @@
+<apex:page id="thePage">
+    <apex:tabPanel>
+        <apex:tab label="Home" name="home1" id="tabOne">
+            We have self-paced video tutorials which you can take at your convenience.
+            So, say no to Time Bound Classes! 
+            Check out this Demo Video
+        </apex:tab>
+        
+        <apex:tab label="Students" name="students1" id="tab2">
+            What if I say you can get Salesforce Admin 201 Dumps for Free!
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>
