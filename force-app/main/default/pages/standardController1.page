@@ -1,6 +1,16 @@
-<apex:page >
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page
-<!-- End Default Content REMOVE THIS -->
+<apex:page standardController="Account">
+    <apex:form>
+        <apex:pageBlock title="My Content" mode="edit">
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection title="My Content Section" columns="2">
+                <apex:inputField value="{!account.name}"/> 
+                <apex:inputField value="{!account.Site}"/>
+                <apex:inputField value="{!account.Type}"/>
+                <apex:inputField value="{!account.AccountNumber}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
 </apex:page>
