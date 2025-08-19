@@ -1,6 +1,8 @@
-<apex:page >
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page
-<!-- End Default Content REMOVE THIS -->
+<apex:page standardController="Account" recordSetVar="accts">
+    <apex:pageBlock>
+        <apex:pageBlockTable value="{!accts}" var="acc">
+            <apex:column value="{!acc.Name}"/>
+            <apex:column value="{!acc.AccountNumber}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
 </apex:page>
