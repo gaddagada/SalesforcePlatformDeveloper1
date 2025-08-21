@@ -43,3 +43,6 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+force-app/main/default/lwc/helloWorld2/helloWorld2.html
+force-app/main/default/lwc/helloWorld2/helloWorld2.js
+force-app/main/default/lwc/helloWorld2/__tests__/helloWorld2.test.js
