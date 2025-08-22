@@ -1,0 +1,21 @@
+.content {
+    padding: 1rem; /* increased padding for better touch targets */
+    background-color: #ffffff;
+    border-radius: 0.5rem; /* slightly more rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* subtle shadow for better separation */
+}
+
+a {
+    color: inherit;
+}
+
+img.product {
+    height: 120px;
+    max-width: initial;
+    pointer-events: none;
+}
+
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
