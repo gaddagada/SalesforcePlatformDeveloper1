@@ -14,4 +14,12 @@ global with sharing class CaseManager {
         insert thisCase; 
         return thisCase.Id;
     }
+
+    @HttpDelete
+    global static void deleteCase(){
+        RestRequest request = RestContext.request; 
+        String caseId = request.requestURI.substring(request.requestURI.lastIndexOf('/') +1); 
+        Case thisCase = [Select Id from Case where id=:caseId];
+        delete thisCase;
+    }
 }
