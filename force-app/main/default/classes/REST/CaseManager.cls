@@ -7,4 +7,11 @@ global with sharing class CaseManager {
         Case result= [Select CaseNumber,Subject,Status,Origin,Priority From Case where Id=:caseId];
         return result;
     }
+
+    @HttpPost 
+    global static Id createCase(String subj, String status, String ori, String pri){
+        Case thisCase = new Case(Subject=subj, Status= status, Origin=ori, Priority=pri);
+        insert thisCase; 
+        return thisCase.Id;
+    }
 }
