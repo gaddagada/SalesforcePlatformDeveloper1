@@ -108,8 +108,42 @@ public with sharing class DateTimeDateTimeDataTypes {
     System.debug('New Expiration Date is ' + newExpirationDate);
 
     
+    //Datetime Class - Extraction Methods 
+    // Extract only the date portion from a datetime to compare against holidays or working days 
+    Datetime eventDateTime = Datetime.newInstance(2023, 12, 25, 10, 0, 0); 
+    Date eventDate = eventDateTime.date(); 
+    System.debug('Event Date is ' + eventDate);
 
 
+    // Use the GMT date component for a global report timestemp comparison 
+    DateTime myDateTime = DateTime.newInstance(2006, 3, 16, 23, 0, 0);
+    DateTime globalReportTimestamp = myDateTime.dateGMT(); 
+    System.debug('Global Report Timestamp Date is ' + globalReportTimestamp);
+
+    //Display the day of the month when an opportunity was created 
+    DateTime opportunityCreatedDateTime = DateTime.newInstance(2023, 5, 10, 14, 30, 0);    
+    Integer dayOfMonth = opportunityCreatedDateTime.day();
+    System.debug('Opportunity Created Day of Month is ' + dayOfMonth);
+
+    // Use GMT day value for backend audit logging.
+    DateTime auditLogDateTime = DateTime.newInstance(2024, 1, 15, 9, 45, 0); 
+    Integer gmtDay = auditLogDateTime.dayGMT(); 
+    System.debug('GMT Day for Audit Logging is ' + gmtDay);
+
+    // Calculate which day of the year a campaign was launched (e.g., day 256 of 2025)
+    DateTime yearCampaignWasLaunched = DateTime.newInstance(2025, 10,21, 15,10,15); 
+    Integer dayOfYearCampaignLaunched = yearCampaignWasLaunched.dayOfYear(); 
+    System.debug('Day of Year Campaign Launched is ' + dayOfYearCampaignLaunched);
+
+    // Get the GMT day of the year for a system maintenance window
+    DateTime systemMaintenanceWindow = DateTime.newInstance(2024, 6, 30, 22, 0, 0); 
+    Integer gmtDayOfYear = systemMaintenanceWindow.dayOfYearGMT(); 
+    System.debug('GMT Day of Year for Maintenance Window is ' + gmtDayOfYear);          
+
+    // Generate a GMT-based day-of-year report for compliance audits.
+    DateTime complianceAuditDateTime = DateTime.newInstance(2023, 11, 5, 12, 0, 0); 
+    Integer gmtDayOfYearForAudit = complianceAuditDateTime.dayOfYearGMT(); 
+    System.debug('GMT Day of Year for Compliance Audit is ' + gmtDayOfYearForAudit);
     /*  
         Additional methods in Timee Apex Documentation  
     */ 
