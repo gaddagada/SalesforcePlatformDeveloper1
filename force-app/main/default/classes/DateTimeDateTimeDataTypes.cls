@@ -2,6 +2,10 @@ public with sharing class DateTimeDateTimeDataTypes {
 
     public static void Date(){
 
+        /*
+            Date Datetime and Tinme class methods in Apex  
+            Standard methods used frequently as a Salesforce Developer 
+        */
         //Date API in Apex 
         Date newDate = Date.newInstance(2019, 7, 14);
         System.debug('Date is ' + newDate); // july 14, 2019
@@ -68,7 +72,47 @@ public with sharing class DateTimeDateTimeDataTypes {
         System.debug('formattedDateTime' + formattedDateTime);
 
 
+    /* 
+        Additional methods in DateTime Apex Documentation  
+    */ 
 
+
+    // Datetime Class - Arithmetic Methods 
+    // Add 10 days to today' date to calculate the due date for a task reminder 
+    Date dueDate  = Date.today().addDays(10);
+    System.debug('Due Date for Task Reminder is ' + dueDate);
+
+    // Add 2 hours to support case opened time to set an SLA response target 
+    Datetime caseOpenedTime = Datetime.now(); 
+    Datetime slaResponseTarget = caseOpenedTime.addHours(2); 
+    System.debug('SLA Response Target Time is ' + slaResponseTarget);
+
+    // Sdchedule a follow-up nitification 15 minutes after a lead is created
+    Datetime leadCreationTime = Datetime.now(); 
+    Datetime followUpNotificationTime = leadCreationTime.addMinutes(15);
+    System.debug('Follow-Up Notification Time is ' + followUpNotificationTime);
+    
+    // Extend a subscription by 3 months from the current renewal date.
+    Datetime currentRenewalDate = Datetime.now(); 
+    Datetime extendedRenewalDate = currentRenewalDate.addMonths(3);
+    System.debug('Extended Renewal Date is ' + extendedRenewalDate);
+    
+    // Set a security token expiry time exactly 60 seconds from issuance 
+    Datetime tokenIssuanceTime = Datetime.now();
+    Datetime tokenExpiryiTime = tokenIssuanceTime.addSeconds(60); 
+    System.debug('Token Expiry Time is ' + tokenExpiryiTime); 
+
+    // Auto-renew a membership for 1 year from its current expiration date.
+    Datetime currentExpirationDate = Datetime.now(); 
+    Datetime newExpirationDate = currentExpirationDate.addYears(1);
+    System.debug('New Expiration Date is ' + newExpirationDate);
+
+    
+
+
+    /*  
+        Additional methods in Timee Apex Documentation  
+    */ 
 
         
     }
