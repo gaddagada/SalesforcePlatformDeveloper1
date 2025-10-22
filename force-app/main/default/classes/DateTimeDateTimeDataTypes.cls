@@ -169,7 +169,8 @@ public with sharing class DateTimeDateTimeDataTypes {
     Time failedOperationTime = Time.newInstance(1, 0, 0, 0);
     Time retryOperationTime = failedOperationTime.addSeconds(30);
     System.debug('Retry Operation Time after 30 seconds buffer is ' + retryOperationTime);
-
+    
+    // Time Class - Component Methods 
     // A business rule checks if a user selected a meeting hour that falls within working hours (e.g., between 9 AM and 5 PM).
     Time meetingTime = Time.newInstance(11, 0, 0, 0);
     Boolean isWithinWorkingHours = (meetingTime.hour() >= 9 && meetingTime.hour() < 5); 
@@ -191,6 +192,7 @@ public with sharing class DateTimeDateTimeDataTypes {
     Integer milliseconds = executionTime.millisecond();
     System.debug('Execution Time in Milliseconds is ' + milliseconds);
 
+    // Time Class - Instance Construction 
     // You are building a custom scheduling tool where a user selects hour, minute, and second from dropdowns, and you construct a Time object to save in a record.
     Integer selectedHour = 14; // 2 PM
     Integer selectedMinute = 30;
