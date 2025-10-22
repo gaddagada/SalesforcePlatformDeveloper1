@@ -170,8 +170,26 @@ public with sharing class DateTimeDateTimeDataTypes {
     Time retryOperationTime = failedOperationTime.addSeconds(30);
     System.debug('Retry Operation Time after 30 seconds buffer is ' + retryOperationTime);
 
+    // A business rule checks if a user selected a meeting hour that falls within working hours (e.g., between 9 AM and 5 PM).
+    Time meetingTime = Time.newInstance(11, 0, 0, 0);
+    Boolean isWithinWorkingHours = (meetingTime.hour() >= 9 && meetingTime.hour() < 5); 
+    System.debug('Is Meeting Time within Working Hours? ' + isWithinWorkingHours);
 
+    // A validation rule ensures that meeting start times are only allowed on the quarter-hour marks (e.g., 0, 15, 30, 45).
+    Time meetingStartTime = Time.newInstance(10, 15, 0, 0);
+    Integer minutes = meetingStartTime.minute();
+    Boolean isQuarterHourMark =  Math.mod(minutes, 15) == 0;
+    System.debug('Is Meeting Start Time on Quarter-Hour Mark? ' + isQuarterHourMark);
     
-        
+    // A testing script verifies that a specific event time occurs exactly at the top of the minute (second = 0).
+    Time eventTimeToTest = Time.newInstance(9, 45, 0, 0);
+    Boolean isTopOfMinute = eventTimeToTest.second() == 0;
+    System.debug('Is Event Time at Top of Minute? ' + isTopOfMinute);   
+
+    // A performance monitoring tool logs the exact time of execution down to the millisecond to ensure SLAs are met.
+    Time executionTime = Time.newInstance(12, 30, 15, 500);
+    Integer milliseconds = executionTime.millisecond();
+    System.debug('Execution Time in Milliseconds is ' + milliseconds);
+
     }
 }
