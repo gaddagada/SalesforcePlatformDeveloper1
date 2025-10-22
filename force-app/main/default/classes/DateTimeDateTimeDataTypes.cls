@@ -191,5 +191,11 @@ public with sharing class DateTimeDateTimeDataTypes {
     Integer milliseconds = executionTime.millisecond();
     System.debug('Execution Time in Milliseconds is ' + milliseconds);
 
+    // You are building a custom scheduling tool where a user selects hour, minute, and second from dropdowns, and you construct a Time object to save in a record.
+    Integer selectedHour = 14; // 2 PM
+    Integer selectedMinute = 30;
+    Integer selectedSecond = 0;
+    Time userSelectedTime = Time.newInstance(selectedHour, selectedMinute, selectedSecond, 0);
+    System.debug('User Selected Time is ' + userSelectedTime);
     }
 }
