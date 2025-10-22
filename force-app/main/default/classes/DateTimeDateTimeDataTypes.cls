@@ -1,6 +1,6 @@
 public with sharing class DateTimeDateTimeDataTypes {
 
-    public static void Date(){
+    public void dateTimeDateTimeDataTypeMethods(){
 
         /*
             Date Datetime and Tinme class methods in Apex  
@@ -66,7 +66,7 @@ public with sharing class DateTimeDateTimeDataTypes {
         Date myDate1 = myDateTime1.date();
         System.debug('Date is ' + myDate1);
 
-        Datetime newDateTime1 = Datetime.instance(2019, 4, 14, 5, 10, 15); 
+        Datetime newDateTime1 = Datetime.newInstance(2019, 4, 14, 5, 10, 15); 
         System.debug('newDateTime1' + newDateTime1);
         String formattedDateTime = newDateTime1.format();
         System.debug('formattedDateTime' + formattedDateTime);
@@ -144,10 +144,34 @@ public with sharing class DateTimeDateTimeDataTypes {
     DateTime complianceAuditDateTime = DateTime.newInstance(2023, 11, 5, 12, 0, 0); 
     Integer gmtDayOfYearForAudit = complianceAuditDateTime.dayOfYearGMT(); 
     System.debug('GMT Day of Year for Compliance Audit is ' + gmtDayOfYearForAudit);
-    /*  
-        Additional methods in Timee Apex Documentation  
-    */ 
 
+    /*  
+        Additional methods in Time Apex Documentation  
+    */ 
+    // Time Class - Arithmetic Methods 
+    // A user schedules a support callback at 2 PM, and you need to calculate the time for a follow-up call exactly 3 hours later.
+    Time supportCallbackTime = Time.newInstance(14,0,0,0);
+    Time followUpCallTime = supportCallbackTime.addHours(3);
+    System.debug('Follow-Up Call Time is ' + followUpCallTime);
+
+
+    // A high-frequency trading app tracks response latency and needs to simulate a 250 ms delay after a known event timestamp.
+    Time eventTimestamp = Time.newInstance(10,30,0,0);
+    Time delayedEventTimestamp = eventTimestamp.addMilliseconds(250);
+    System.debug('Delayed Event Timestamp after 250 ms delay is ' + delayedEventTimestamp);
+
+    // A doctor’s appointment system sends an alert 10 minutes before the scheduled time.
+    Time scheduleDoctorsAppointmentTime = Time.newInstance(3, 15, 0, 0);
+    Time appointmentAlertTime = scheduleDoctorsAppointmentTime.addMinutes(-10);
+    System.debug('Appointment Alert Time is ' + appointmentAlertTime);
+
+    // A background process adds a security buffer of 30 seconds before retrying a failed operation.
+    Time failedOperationTime = Time.newInstance(1, 0, 0, 0);
+    Time retryOperationTime = failedOperationTime.addSeconds(30);
+    System.debug('Retry Operation Time after 30 seconds buffer is ' + retryOperationTime);
+
+
+    
         
     }
 }
