@@ -19,4 +19,16 @@ public with sharing class ConditionalIfElseIfStatement {
             System.debug('You have not scored top 3 positions, please try next time.');
         }
     }
+
+    public static void positiveNegativeZeroNumberUsingIfElseIf(){
+        integer num = 10; 
+        if(num > 0){
+            System.debug('Number is positive');
+        }else if(num < 0){
+            System.debug('Number is negative');
+        }else{
+            System.debug('Number is zero');
+        }
+        System.debug('if else ladder finished');
+    }
 }
