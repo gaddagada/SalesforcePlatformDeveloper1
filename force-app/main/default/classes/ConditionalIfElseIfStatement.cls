@@ -21,7 +21,7 @@ public with sharing class ConditionalIfElseIfStatement {
     }
 
     public static void positiveNegativeZeroNumberUsingIfElseIf(){
-        integer num = 10; 
+        Integer num = 10; 
         if(num > 0){
             System.debug('Number is positive');
         }else if(num < 0){
@@ -32,8 +32,35 @@ public with sharing class ConditionalIfElseIfStatement {
         System.debug('if else ladder finished');
     }
     public static void topScore(){
-        
-    
+        Integer topScore = 90, secondTopScore = 85, myScore = 89; 
+        if(myScore > topScore){
+            System.debug('I have svored the highest score');
+        }else if((myScore > topScore) && (myScore > secondTopScore)){
+            System.debug('I have scored greater than the second highest score'); 
+        }else if ((myScore < topScore) && (myScore <secondTopScore) && (myScore > 70)){
+            System.debug('You can do better...');
+        }else{
+            System.debug('Work Hard next time'); 
+        }
+    }
+
+    public static void salaryIfElseIfExample(){
+        Integer salary = 100000; 
+        Decimal bonus, salaryAfterBonus; 
+        if(salary >= 150000){
+            bonus = 15; 
+        }else if(salary >= 120000){
+            bonus = 12;
+        } else if(salary >= 100000){
+            bonus = 10;
+        }else{
+            bonus = 5; 
+        }
+
+        salaryAfterBonus = salary + (salary * bonus/100);
+        System.debug('Salary after bonus is ' + salary);
+        System.debug('Bonus ' + bonus + '% applied');
+        System.debug('Salary after bonus'+ salaryAfterBonus);  
     }
 }
 
