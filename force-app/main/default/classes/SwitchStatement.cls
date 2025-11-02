@@ -30,4 +30,28 @@ public with sharing class SwitchStatement {
             }
         }
     }
+    public static void switchStatementPlaceMedalColor(){
+        Integer place = 1;
+        String medal_color; 
+        switch on place{
+            when 1 {
+                medal_color = 'Gold';
+            }
+            when 2 {
+                medal_color = 'Silver';
+            }
+            when 3 {
+                medal_color = 'Bronze';
+            }
+            when else {
+                medal_color = 'Null';
+            }
+        }
+
+        if(medal_color != 'null'){
+            System.debug('You have scored ' + medal_color + ' medal. Congratulations!!'); 
+        }else{
+            System.debug('Work Hard... Next Time');
+        }
+    }
 }
