@@ -31,4 +31,9 @@ public with sharing class ConditionalIfElseIfStatement {
         }
         System.debug('if else ladder finished');
     }
+    public static void topScore(){
+        
+    
+    }
 }
+
