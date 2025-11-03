@@ -53,4 +53,14 @@ public with sharing class ForLoop {
             }
         }
     }
+
+    public static void nestedForLoop1(){
+        for(Integer i = 1; i<=4; i++){
+            for(Integer j=1; j<=i; j++){
+                System.debug(j);
+            }
+        }
+    }
+
+
 } 
