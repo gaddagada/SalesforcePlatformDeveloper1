@@ -12,7 +12,7 @@ public with sharing class Collections {
         System.debug('Elements in the list ' + studentNames); 
     }
 
-    public static void listCollectionMethods(){
+    public static void listCollectionMethodsAddAndRemove(){
        // Adding to List collection methods  performing by adding remove one operation at a time. 
         List<String> obj = new List<String>(); 
         obj.add('Ajeet');
