@@ -75,6 +75,27 @@ public with sharing class Collections {
         System.debug('Value for the key  = 155 ' + studentNamesMap.get(5));
     }
 
+    // Iterate over map in Salesforce
+    public void iterateOverMapExample() {
+        Map<Integer, String> empMap = new Map<Integer, String>();
+        empMap.put(101, 'Deepika');
+        empMap.put(102, 'Vivek');
+        empMap.put(103, 'John');
+        empMap.put(104, 'Dev');
+        empMap.put(105, 'Sam');
+
+        // Get all the keys of the map 
+        Set<Integer> empIds = empMap.keySet();
+        System.debug('Employee Ids ' + empIds); // [101,102,103,104,105]
+
+        // Get all the values of the map 
+        List<String> empNames = empMap.values();
+        System.debug('Employee Names ' + empNames); // [Deepika,Vivek,John,Dev,Sam]
+        System.debug('Size of the map ' + empMap.size()); // 5
+        empMap.clear(); 
+        System.debug('Size of the map after clear ' + empMap.size()); // 0
+    }
+
     // List collection class methods 
     public static void listCollectionMethods(){
         //Displaying multiple items added to a list at once 
