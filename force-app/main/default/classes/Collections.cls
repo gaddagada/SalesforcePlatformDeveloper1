@@ -25,6 +25,10 @@ public with sharing class Collections {
         obj.remove(1);
         System.debug('Final list of friends '+ obj);
     }
+
+
+
+
     // Set Collection 
     public static void setCollectionExample() {
         Set<String> studentNames = new Set<String>(); 
@@ -97,8 +101,46 @@ public with sharing class Collections {
 
         // display elements of my set 
         System.debug('Elements of my set ' + hSet);
-        
-
     }
+
+    // Sorting - No Sorting 
+    public static void sortingColorsSortingAndNoSortingExample() {
+        List<String> colors = new List<String>{'Yellow', 'Red', 'Green'};
+        System.debug('My elementsd in my list are ' + colors);
+
+        // no sort 
+        System.debug('color at index 0' + colors.get(0));  // Yellow
+        System.debug('color at index 0' + colors.get(1));  // Red
+        System.debug('color at index 0' + colors.get(2)); // Green 
+
+        // sort 
+        colors.sort();
+        System.debug('After sorting my elements in my list are ' + colors);
+
+        System.debug('color at index 0' + colors.get(0));  // Green
+        System.debug('color at index 0' + colors.get(1));  // Red
+        System.debug('color at index 0' + colors.get(2)); // Yellow
+    }
+
+    // Sorting - No Sorting 
+    public static void sortingNumbersSortingAndNoSortingExample() {
+        List<Integer> myList = new List<Integer>{100, 34, 80, 34};
+        System.debug('My list has following items ' + myList); // 100, 34, 80, 79
+        // No sort
+        System.debug('element at index 0:' + myList[0]); // 100 
+        System.debug('element at index 1:' + myList[1]); // 34
+        System.debug('element at index 2:' + myList[2]); // 80
+        System.debug('element at index 3:' + myList[3]); // 79
+        
+        // sort 
+        myList.sort();
+        System.debug('After sorting my list has following items ' + myList); // 34,79,80,100
+        System.debug('element at index 0:' + myList[0]); // 34 
+        System.debug('element at index 1:' + myList[1]); // 79
+        System.debug('element at index 2:' + myList[2]); // 80  
+        System.debug('element at index 3:' + myList[3]); // 100             
+    }
+
+
 
 }
