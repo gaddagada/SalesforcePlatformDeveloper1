@@ -42,6 +42,26 @@ public with sharing class Collections {
         System.debug('Elements in the list ' + studentNames); 
     }
 
+    // Iterate over set in Salesforce 
+    public void iterateOverSetExample() {
+        Set<String> hset = new Set<String>();
+        hset.add('element 1');
+        hset.add('element 2');
+        hset.add('element 3');  
+        hset.add('element 4'); 
+        hset.add('element 4'); 
+
+        hset.add('element 5'); 
+        System.debug('elements in my set '+ hset); 
+        System.debug('size of my set '+ hset.size());// 5 
+        // set always contain unique values
+        hset.clear();  
+        // remove all the elements in the set 
+        System.debug('elements in my set '+ hset); // empty
+        System.debug('size of my set '+ hset.size()); // 0
+    }     
+
+
     // Map Collection 
     public static void mapCollectionExample() {
         Map<Integer, String> studentNamesMap = new Map<Integer, String>();
