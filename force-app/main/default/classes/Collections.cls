@@ -11,6 +11,20 @@ public with sharing class Collections {
         System.debug('Size of the list ' + studentNames.size()); 
         System.debug('Elements in the list ' + studentNames); 
     }
+
+    public static void listCollectionMethods(){
+       // Adding to List collection methods  performing by adding remove one operation at a time. 
+        List<String> obj = new List<String>(); 
+        obj.add('Ajeet');
+        obj.add('Harry');
+        obj.add('Steve');
+        System.debug('My friends ' + obj);
+        obj.add(0, 'Rahul');
+        obj.add('Justin'); 
+        System.debug('New list of friends' + obj);
+        obj.remove(1);
+        System.debug('Final list of friends '+ obj);
+    }
     // Set Collection 
     public static void setCollectionExample() {
         Set<String> studentNames = new Set<String>(); 
