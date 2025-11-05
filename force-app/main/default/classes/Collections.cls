@@ -96,6 +96,18 @@ public with sharing class Collections {
         System.debug('Size of the map after clear ' + empMap.size()); // 0
     }
 
+    // Adding to map in Salesforce 
+    public static void addingToMapExample() {
+        // In map key cannot be replaced but value can be replaced for the same key.
+        Map<Integer, String> hmap = new Map<Integer, String>(); 
+        hmap.put(1, 'David');
+        hmap.put(56, 'John');
+        hmap.put(8, 'Chris');
+        hmap.put(2, 'Adam');
+        hmap.put(9,'John'); 
+        System.debug('My employees ' + hmap); // 2=adam, 8=chris, 9=john, 56=john 
+    }
+
     // List collection class methods 
     public static void listCollectionMethods(){
         //Displaying multiple items added to a list at once 
