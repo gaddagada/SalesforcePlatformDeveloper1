@@ -16,10 +16,9 @@ public with sharing class DMLExceptionMethods {
                 Integer numErrors = de.getNumDml(); // gets the total number of saved records 
                 System.debug('getNumDML = ' + numErrors);
                 for(Integer i = 0; i < numErrors; i++){ // returns the fields that are causing the issue for that saved record
+                    System.debug('getDmlFieldNames =' + de.getDmlFieldNames(i)); // returns the names of the fields that caused the error
                     System.debug('getDmlMessage = ' + de.getDmlMessage(i)); // provides the reason for the failure
                 }    
             }
-
-
     }
 }
