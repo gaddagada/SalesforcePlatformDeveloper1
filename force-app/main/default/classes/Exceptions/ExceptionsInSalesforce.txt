@@ -25,4 +25,16 @@ QueryException
     Any problem with SOQL queries, such as assigning a query that returns no records or more than one record to a singleton sObject variable.
 SObjectException
     Any problem with SObject operations, such as attempting to change a field in an update statement that can only be changed during insert. 
-    
+
+
+Important Exception Methods
+getCause()
+    Returns the cause of the exception as an exception object. 
+getLineNumber()
+    Returns the line number where the exception was thrown.
+getMessage()
+    Returns the error message associated with the exception.
+getStackTraceString()
+    Returns the stack trace as a string.
+getTypeName()
+    Returns the type of exception, such as DmlException, ListException, MathException, and so on.
