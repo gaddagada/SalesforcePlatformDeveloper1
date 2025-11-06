@@ -1,0 +1,28 @@
+Built-in exceptions in Salesforce are predefined exceptions that are automatically thrown by the Apex runtime system when specific error conditions occur. 
+These exceptions help developers handle common error scenarios gracefully. Some common built-in exceptions in Salesforce Apex include:
+
+1. **NullPointerException**: Thrown when an application attempts to use an object reference that has the null value.
+2. **DmlException**: Thrown when a DML operation (like insert, update, delete) fails. This exception provides details about the failure, including the specific records 
+that caused the error.
+3. **QueryException**: Thrown when a SOQL query fails to execute properly, such as when it returns more than one record for a single-record query.
+4. **StringException**: Thrown when an operation on a string fails, such as trying to access a character at an invalid index.
+5. **ListException**: Thrown when an operation on a list fails, such as trying to access an index that is out of bounds.
+6. **MathException**: Thrown when a mathematical operation fails, such as division by zero.
+7. **IllegalArgumentException**: Thrown when a method receives an argument that is not
+valid or appropriate.
+8. **IllegalStateException**: Thrown when a method is invoked at an illegal or inappropriate time.
+9. **SObjectException**: Thrown when there is an error related to SObject operations, such as accessing a field that does not exist.
+10. **CalloutException**: Thrown when a callout to an external service fails.               
+These built-in exceptions can be caught and handled using try-catch blocks in Apex code, allowing developers to implement robust error handling mechanisms in their applications.
+
+
+These are the commmin exceptions in Salesforce Apex.
+ListException
+    Any problem with a list, such as attempting to access an index that is out of bounds.
+NullPointerException
+    Any problem with dereferencing a null variable. 
+QueryException
+    Any problem with SOQL queries, such as assigning a query that returns no records or more than one record to a singleton sObject variable.
+SObjectException
+    Any problem with SObject operations, such as attempting to change a field in an update statement that can only be changed during insert. 
+    
