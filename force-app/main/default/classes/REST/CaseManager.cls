@@ -37,7 +37,7 @@ global with sharing class CaseManager {
         RestRequest request=RestContext.request;
         String caseId= request.requestURI.substring(request.requestURI.lastIndexOf('/')+1);
         Case thisCase=[select Id from case where Id=:caseId]; 
-        sMap<String,Object> params= ( Map<String,Object>)JSON.deserializeUntyped(request.requestBody.toString());
+        Map<String,Object> params= ( Map<String,Object>)JSON.deserializeUntyped(request.requestBody.toString());
         for(String fieldName:params.keySet())
         {
             thisCase.put(fieldName,params.get(fieldName));
